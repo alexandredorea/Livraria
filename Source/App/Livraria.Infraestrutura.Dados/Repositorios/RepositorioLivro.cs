@@ -2,9 +2,8 @@
 using Livraria.Dominio.Interfaces.Repositorio;
 using Livraria.Infraestrutura.Dados.Contexto;
 using Livraria.Infraestrutura.Dados.Repositorios.Comum;
-using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 
 namespace Livraria.Infraestrutura.Dados.Repositorios
 {
@@ -16,13 +15,15 @@ namespace Livraria.Infraestrutura.Dados.Repositorios
 
         public Livro Selecionar(string titulo)
         {
-            throw new NotImplementedException();
-            //return contextoBanco.Livros.Where(l => l.Titulo == titulo);
+            return Selecionar().Where(l => l.Titulo == titulo).FirstOrDefault();
         }
 
-        public IEnumerable<Livro> Selecionar(bool ordenarPorNome = false)
+        public IEnumerable<Livro> Selecionar(bool ordenarPorTitulo = false)
         {
-            throw new NotImplementedException();
+            if (ordenarPorTitulo)
+                return Selecionar().OrderBy(l => l.Titulo);
+            else
+                return Selecionar();
         }
     }
 }

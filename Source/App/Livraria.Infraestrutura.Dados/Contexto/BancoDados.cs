@@ -11,21 +11,29 @@ namespace Livraria.Infraestrutura.Dados.Contexto
     public class BancoDados : DbContext
     {
 
+        public BancoDados(DbContextOptions<BancoDados> options) : base(options)
+        {
+        }
+
+        public BancoDados() : base()
+        {
+        }
+
         public DbSet<Livro> Livros { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            //Obtem a configuração do app settings
-            var configuracao = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json")
-                .Build();
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    //Obtem a configuração do app settings
+        //    var configuracao = new ConfigurationBuilder()
+        //        .SetBasePath(Directory.GetCurrentDirectory())
+        //        .AddJsonFile("appsettings.json")
+        //        .Build();
 
-            //Define o banco de dados que será usado
-            optionsBuilder.UseSqlServer(configuracao.GetConnectionString("ConnectionString"));
+        //    //Define o banco de dados que será usado
+        //    optionsBuilder.UseSqlServer(configuracao.GetConnectionString("ConnectionString"));
 
-            base.OnConfiguring(optionsBuilder);
-        }
+        //    base.OnConfiguring(optionsBuilder);
+        //}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

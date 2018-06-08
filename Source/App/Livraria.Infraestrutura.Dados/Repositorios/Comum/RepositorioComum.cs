@@ -8,7 +8,7 @@ using System.Text;
 
 namespace Livraria.Infraestrutura.Dados.Repositorios.Comum
 {
-    public class RepositorioComum<TipoEntidade> : IRepositorioComum<TipoEntidade> where TipoEntidade : class
+    public abstract class RepositorioComum<TipoEntidade> : IRepositorioComum<TipoEntidade> where TipoEntidade : class
     {
         private readonly BancoDados _contexto;
         private DbSet<TipoEntidade> _entidade;

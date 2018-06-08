@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Livraria.Dominio.Interfaces.Servico
 {
-    interface IServicoLivros : IServicoComum<Livro>
+    public interface IServicoLivros : IServicoComum<Livro>
     {
         Livro Selecionar(string titulo);
         IEnumerable<Livro> Selecionar(bool ordenarPorNome = false);
