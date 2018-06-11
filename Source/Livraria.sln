@@ -25,7 +25,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Livraria.Dominio", "App\Liv
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Livraria.Infraestrutura.Dados", "App\Livraria.Infraestrutura.Dados\Livraria.Infraestrutura.Dados.csproj", "{4C2B2952-1E0C-4626-AAAF-9A08D219280B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Livraria.Infraestrutura.Transversal.InjecaoDependencia", "App\Livraria.Infraestrutura.Transversal.InjecaoDependencia\Livraria.Infraestrutura.Transversal.InjecaoDependencia.csproj", "{45B374E2-9A28-4B47-912B-B0752A61FAB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Livraria.Infraestrutura.Transversal.InjecaoDependencia", "App\Livraria.Infraestrutura.Transversal.InjecaoDependencia\Livraria.Infraestrutura.Transversal.InjecaoDependencia.csproj", "{45B374E2-9A28-4B47-912B-B0752A61FAB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Livraria.Aplicacao", "App\Livraria.Aplicacao\Livraria.Aplicacao.csproj", "{69BCBDB2-0ED8-462F-A94C-F5287915F598}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Livraria.Apresentacao", "App\Livraria.Apresentacao\Livraria.Apresentacao.csproj", "{27ECE2D7-9619-4AEC-8FF5-0A5974B96032}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Livraria.Teste.Unitario", "Test\Livraria.Teste.Unitario\Livraria.Teste.Unitario.csproj", "{919FCCAD-B285-4F95-B8E9-12ED2655D5E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +51,18 @@ Global
 		{45B374E2-9A28-4B47-912B-B0752A61FAB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45B374E2-9A28-4B47-912B-B0752A61FAB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45B374E2-9A28-4B47-912B-B0752A61FAB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69BCBDB2-0ED8-462F-A94C-F5287915F598}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69BCBDB2-0ED8-462F-A94C-F5287915F598}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69BCBDB2-0ED8-462F-A94C-F5287915F598}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69BCBDB2-0ED8-462F-A94C-F5287915F598}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27ECE2D7-9619-4AEC-8FF5-0A5974B96032}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27ECE2D7-9619-4AEC-8FF5-0A5974B96032}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27ECE2D7-9619-4AEC-8FF5-0A5974B96032}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27ECE2D7-9619-4AEC-8FF5-0A5974B96032}.Release|Any CPU.Build.0 = Release|Any CPU
+		{919FCCAD-B285-4F95-B8E9-12ED2655D5E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{919FCCAD-B285-4F95-B8E9-12ED2655D5E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{919FCCAD-B285-4F95-B8E9-12ED2655D5E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{919FCCAD-B285-4F95-B8E9-12ED2655D5E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +78,9 @@ Global
 		{F3E4971A-6EFB-4FBE-8B8D-A447B3944791} = {0A1545B5-2DAD-4FA5-BA7E-B4C4E51206FC}
 		{4C2B2952-1E0C-4626-AAAF-9A08D219280B} = {B1ABE91D-80FA-4C11-A920-12351DD9B4AF}
 		{45B374E2-9A28-4B47-912B-B0752A61FAB1} = {05C40A6C-2DD5-4663-B49C-DA7B569A9CD4}
+		{69BCBDB2-0ED8-462F-A94C-F5287915F598} = {80CBA4B3-0462-4409-A456-DD825A7FE840}
+		{27ECE2D7-9619-4AEC-8FF5-0A5974B96032} = {4F0F67D5-72D9-4051-A632-B4375D82109D}
+		{919FCCAD-B285-4F95-B8E9-12ED2655D5E2} = {A4CA5E19-C411-4F52-8CA0-A12C4D1F00A7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CDBEDE15-9F0C-4EFC-810C-FED7CC46AA93}

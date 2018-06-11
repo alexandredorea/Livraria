@@ -10,9 +10,10 @@ namespace Livraria.Infraestrutura.Dados.Contexto
 {
     public class BancoDados : DbContext
     {
-
         public BancoDados(DbContextOptions<BancoDados> options) : base(options)
         {
+            // Garante com que o banco seja criado a partir das classes 
+            Database.EnsureCreated();
         }
 
         public BancoDados() : base()
@@ -21,19 +22,23 @@ namespace Livraria.Infraestrutura.Dados.Contexto
 
         public DbSet<Livro> Livros { get; set; }
 
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    //Obtem a configuração do app settings
-        //    var configuracao = new ConfigurationBuilder()
-        //        .SetBasePath(Directory.GetCurrentDirectory())
-        //        .AddJsonFile("appsettings.json")
-        //        .Build();
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            //Obtem a configuração do app settings
+            // pegue onde ta a configuração da minha connection string
+            // AddJsonFile - faz com que seja geral vai servir para qualquer tipo de sistemas que usam essa arquitetura
+            var configuracao = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json")
+                .Build();
 
-        //    //Define o banco de dados que será usado
-        //    optionsBuilder.UseSqlServer(configuracao.GetConnectionString("ConnectionString"));
+            // Verifica se o projeto main possui uma conexão ou uma string connection
+            if (!optionsBuilder.IsConfigured)
+                //Define o banco de dados que será usado
+                optionsBuilder.UseSqlServer(configuracao.GetConnectionString("DefaultConnection"));
 
-        //    base.OnConfiguring(optionsBuilder);
-        //}
+            base.OnConfiguring(optionsBuilder);
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
